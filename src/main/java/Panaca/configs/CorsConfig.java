@@ -1,4 +1,4 @@
-package com.tu.paquete.config;
+package Panaca.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
