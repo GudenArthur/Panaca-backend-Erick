@@ -15,6 +15,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(
+    origins = {
+        "http://localhost:4200",
+        "https://panaca-front-erick.vercel.app"
+    },
+    allowedHeaders = "*",
+    methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS},
+    allowCredentials = "true"
+)
+
 @RestController
 @RequestMapping("/api/auth")
 @RequiredArgsConstructor

@@ -32,6 +32,16 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
+@CrossOrigin(
+    origins = {
+        "http://localhost:4200",
+        "https://panaca-front-erick.vercel.app"
+    },
+    allowedHeaders = "*",
+    methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS},
+    allowCredentials = "true"
+)
+
 @RestController
 @RequestMapping("/api/cuenta")
 @SecurityRequirement(name = "bearerAuth")
