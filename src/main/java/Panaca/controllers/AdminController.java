@@ -229,5 +229,9 @@ public class AdminController {
         DevolucionResponseDTO dto = devolucionService.rechazar(id);
         return ResponseEntity.ok(new MensajeDTO<>(true, dto));
     }
+    @GetMapping("/api/test-cors")
+public ResponseEntity<String> testCors() {
+    return ResponseEntity.ok("CORS OK");
+}
 
 }
